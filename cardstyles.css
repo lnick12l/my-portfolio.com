@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: #ffffff;
+    background-image: url("FondoCartaNick.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.bg-image {
+    filter: blur(10px);
+    -webkit-filter: blur(10px); /* Safari support */
+    height: 100%;
+    width: 100%;
+}
+
+.card {
+    width: 1300px;
+    height: 900px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    text-align: left;
+    font-size: 25px;
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    min-height: 480px;
+}
+
+img {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    left: 75%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.socials button {
+    border: none;
+    background: linear-gradient(90deg,rgba(35, 153, 204, 1) 0%, rgba(70, 196, 250, 1) 50%, rgba(121, 229, 237, 1) 100%);
+    width: 250px;
+    height: 80px;
+    margin: 10px 0;
+    border-radius: 15px;
+    font-size: 24px;
+}
+
+
+.socials button:hover {
+    background: #2399cc;
+    background: linear-gradient(90deg,rgb(29, 130, 169) 0%, rgb(53, 148, 189) 50%, rgb(89, 168, 174) 100%);
+}
+
+a {
+    text-decoration: none;
+}
+
+i {
+    font-size: 100px;
+    color: #2399cc;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-decoration: none;
+}
+
+i:hover {
+    color: #13506a;
+    cursor: pointer;
+}
+
+@media (max-width: 1300px), (max-height: 900px) {
+
+    body {
+        height: auto;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        height: auto;
+        min-height: 100vh;
+        padding: 20px;
+        width: 100%;
+        max-width: 480px;
+        overflow: visible;
+        margin: 20px auto;
+    }
+
+    h1, h2 {
+        order: 1;
+        margin-bottom: 10px;
+        text-align: center;
+        width: 100%;
+        padding: 0 10px;
+        /* reduce heading sizes on small screens to avoid pushing content */
+        font-size: 32px;
+    }
+
+    img {
+        position: static;
+        order: 2;
+        display: block;
+        margin: 12px auto;
+        max-width: 65%;
+        max-height: 30vh;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        margin-top: 45%;
+    }
+
+    .socials {
+        position: static;
+        order: 3;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        margin: 10px 0 20px;
+        margin-top: 45%;
+        margin-left: 100%;
+    }
+
+    .socials a {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .socials button {
+        width: 85%;
+        max-width: 360px;
+        margin-left: 0;
+    }
+
+    i {
+        position: static;
+        margin-top: 20px;
+        margin-left: 50%;
+        order: 4;
+    }
+
+}
